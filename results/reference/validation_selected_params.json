@@ -1,0 +1,36 @@
+{
+  "selection_rule": "validation_accuracy, then lower validation_log_loss, then smaller train_validation_gap",
+  "note": "回测集不参与参数选择；最终模型用 train+validation 重新拟合后进入测试和回测。",
+  "selected": {
+    "random_forest": {
+      "model": "random_forest",
+      "config_id": "baseline",
+      "params": "{\"bootstrap\": true, \"ccp_alpha\": 0.0, \"class_weight\": \"balanced_subsample\", \"criterion\": \"gini\", \"max_depth\": 6, \"max_features\": \"sqrt\", \"max_leaf_nodes\": null, \"max_samples\": null, \"min_impurity_decrease\": 0.0, \"min_samples_leaf\": 50, \"min_samples_split\": 2, \"min_weight_fraction_leaf\": 0.0, \"monotonic_cst\": null, \"n_estimators\": 200, \"n_jobs\": -1, \"oob_score\": false, \"random_state\": 42, \"verbose\": 0, \"warm_start\": false}",
+      "train_accuracy": 0.6088235294117647,
+      "validation_accuracy": 0.5523529411764706,
+      "validation_log_loss": 0.6862476252466624,
+      "test_accuracy": 0.5337900388816885,
+      "selected": true
+    },
+    "xgboost": {
+      "model": "xgboost",
+      "config_id": 4,
+      "params": "{\"colsample_bytree\": 0.7, \"eval_metric\": \"logloss\", \"learning_rate\": 0.03, \"max_depth\": 3, \"min_child_weight\": 50, \"n_estimators\": 120, \"n_jobs\": -1, \"objective\": \"binary:logistic\", \"random_state\": 42, \"reg_alpha\": 1.0, \"reg_lambda\": 12.0, \"subsample\": 0.7, \"tree_method\": \"hist\"}",
+      "train_accuracy": 0.5843591741332295,
+      "validation_accuracy": 0.5447058823529412,
+      "validation_log_loss": 0.6874550486307076,
+      "test_accuracy": 0.5354563969635253,
+      "selected": true
+    },
+    "lightgbm": {
+      "model": "lightgbm",
+      "config_id": 4,
+      "params": "{\"boosting_type\": \"gbdt\", \"colsample_bytree\": 0.7, \"learning_rate\": 0.03, \"max_depth\": 3, \"min_child_samples\": 500, \"min_split_gain\": 0.02, \"n_estimators\": 120, \"n_jobs\": -1, \"num_leaves\": 7, \"objective\": \"binary\", \"random_state\": 42, \"reg_alpha\": 1.0, \"reg_lambda\": 12.0, \"subsample\": 0.7, \"verbose\": -1}",
+      "train_accuracy": 0.5806388780677834,
+      "validation_accuracy": 0.5444117647058824,
+      "validation_log_loss": 0.6880571303057358,
+      "test_accuracy": 0.5341603406776523,
+      "selected": true
+    }
+  }
+}

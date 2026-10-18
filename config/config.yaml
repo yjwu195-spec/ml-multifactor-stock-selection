@@ -1,0 +1,75 @@
+project:
+  name: bohai_research_rf_replication
+  root_dir: .
+
+tushare:
+  token: ""
+  token_env: TUSHARE_TOKEN
+  request_pause_seconds: 0.2
+  retry_times: 3
+
+data:
+  start_date: "20100104"
+  end_date: "20250430"
+  exchange: "SSE"
+  benchmark_index: "000905.SH"
+  rebalance_window: 20
+  lookback_beta: 60
+  lookback_mfi: 14
+  index_weight_freq: "M"
+  download_foundation_only: false
+  overwrite_raw: false
+
+universe:
+  min_constituents_warning: 400
+
+label:
+  top_pct: 0.30
+  bottom_pct: 0.30
+
+preprocess:
+  winsor_method: "mad"
+  winsor_n: 3.0
+  fillna_method: "cross_section_median"
+  standardize: true
+  use_pca: false
+  pca_variance_ratio: 0.95
+
+model:
+  type: "random_forest"  # 可选: random_forest, xgboost, lightgbm
+  top_n: 10
+  random_state: 42
+  n_estimators: 200
+  max_depth: 6
+  min_samples_leaf: 50
+  max_features: "sqrt"
+  class_weight: "balanced_subsample"
+  n_jobs: -1
+  xgboost:
+    n_estimators: 300
+    max_depth: 4
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_lambda: 1.0
+    tree_method: "hist"
+  lightgbm:
+    n_estimators: 300
+    max_depth: -1
+    num_leaves: 31
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_lambda: 1.0
+
+backtest:
+  transaction_cost_bps: 10
+  initial_nav: 1.0
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  features: data/features
+  labels: data/labels
+  outputs: outputs
+  reports: reports

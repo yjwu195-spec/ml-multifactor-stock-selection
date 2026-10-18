@@ -1,0 +1,85 @@
+{
+  "rows": [
+    {
+      "model": "lightgbm",
+      "strategy": "long_top10",
+      "total_return": 0.45718014766742665,
+      "annual_return": 0.08678849768046049,
+      "volatility": 0.29640016962990495,
+      "sharpe": 0.4270002175224609,
+      "max_drawdown": 0.43752957515299595
+    },
+    {
+      "model": "lightgbm",
+      "strategy": "long_top10_short_bottom10",
+      "total_return": -0.7840096586198884,
+      "annual_return": -0.2873521859270298,
+      "volatility": 0.6571763846075088,
+      "sharpe": -0.13259307712155605,
+      "max_drawdown": 0.8665441094055853
+    },
+    {
+      "model": "lightgbm",
+      "strategy": "long_top10_short_index",
+      "total_return": 0.6358173699225385,
+      "annual_return": 0.11492754062508515,
+      "volatility": 0.2750963683378065,
+      "sharpe": 0.5291694698318645,
+      "max_drawdown": 0.4218008185753952
+    },
+    {
+      "model": "random_forest",
+      "strategy": "long_top10",
+      "total_return": 1.0484188734603075,
+      "annual_return": 0.17176342596100302,
+      "volatility": 0.25868553615847356,
+      "sharpe": 0.7412126098271633,
+      "max_drawdown": 0.3572972637670806
+    },
+    {
+      "model": "random_forest",
+      "strategy": "long_top10_short_bottom10",
+      "total_return": -0.9652316475148506,
+      "annual_return": -0.5240899139808565,
+      "volatility": 0.7887577351932769,
+      "sharpe": -0.36998403979461963,
+      "max_drawdown": 0.9816760540082627
+    },
+    {
+      "model": "random_forest",
+      "strategy": "long_top10_short_index",
+      "total_return": 1.216718319318551,
+      "annual_return": 0.19239519718733833,
+      "volatility": 0.26635962571108296,
+      "sharpe": 0.7912259348550235,
+      "max_drawdown": 0.23133383109125305
+    },
+    {
+      "model": "xgboost",
+      "strategy": "long_top10",
+      "total_return": 0.2490065700679498,
+      "annual_return": 0.05037865098758587,
+      "volatility": 0.3132935007578232,
+      "sharpe": 0.3092640301058543,
+      "max_drawdown": 0.5024643139974404
+    },
+    {
+      "model": "xgboost",
+      "strategy": "long_top10_short_bottom10",
+      "total_return": -0.8718754597996411,
+      "annual_return": -0.365049636777234,
+      "volatility": 0.6534821421105199,
+      "sharpe": -0.34529913537116264,
+      "max_drawdown": 0.8872745915887891
+    },
+    {
+      "model": "xgboost",
+      "strategy": "long_top10_short_index",
+      "total_return": 0.41602026370851153,
+      "annual_return": 0.07992676156399581,
+      "volatility": 0.28400970055691543,
+      "sharpe": 0.4080849101400121,
+      "max_drawdown": 0.4057484322392899
+    }
+  ]
+}
