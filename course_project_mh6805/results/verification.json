@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "unit_tests": 9,
+  "real_raw_input_files": 200,
+  "eligible_panel_rows": 77034,
+  "models": 4,
+  "ablation_rows": 40,
+  "decile_rows": 40,
+  "checks": [
+    "announcement_and_membership_timing",
+    "execution_after_signal",
+    "common_stock_date_keys",
+    "middle_unlabeled_stocks_retained",
+    "daily_nav_compounding",
+    "initial_capital_drawdown",
+    "common_portfolio_dates",
+    "nonnegative_cash",
+    "summary_recalculation"
+  ],
+  "full_data_training_and_backtest_executed": true
+}

@@ -1,0 +1,234 @@
+{
+  "Logistic Regression": {
+    "selection": "minimum mean purged training time-CV log loss; validation loss tie-break",
+    "selected": {
+      "candidate": 1,
+      "params": {
+        "C": 0.01
+      },
+      "cv_log_loss": 0.7002443067630729,
+      "validation_log_loss": 0.6915435501546613,
+      "validation_accuracy": 0.5346904860822601
+    },
+    "candidates": [
+      {
+        "candidate": 1,
+        "params": {
+          "C": 0.01
+        },
+        "cv_log_loss": 0.7002443067630729,
+        "validation_log_loss": 0.6915435501546613,
+        "validation_accuracy": 0.5346904860822601
+      },
+      {
+        "candidate": 2,
+        "params": {
+          "C": 0.1
+        },
+        "cv_log_loss": 0.7017220107528447,
+        "validation_log_loss": 0.6916226228048267,
+        "validation_accuracy": 0.5342750311591192
+      },
+      {
+        "candidate": 3,
+        "params": {
+          "C": 1
+        },
+        "cv_log_loss": 0.70195451385203,
+        "validation_log_loss": 0.6916298801446015,
+        "validation_accuracy": 0.533651848774408
+      }
+    ]
+  },
+  "Random Forest": {
+    "selection": "minimum mean purged training time-CV log loss; validation loss tie-break",
+    "selected": {
+      "candidate": 1,
+      "params": {
+        "n_estimators": 160,
+        "max_depth": 4,
+        "min_samples_leaf": 100
+      },
+      "cv_log_loss": 0.6942368045669262,
+      "validation_log_loss": 0.6901854276246927,
+      "validation_accuracy": 0.533651848774408
+    },
+    "candidates": [
+      {
+        "candidate": 1,
+        "params": {
+          "n_estimators": 160,
+          "max_depth": 4,
+          "min_samples_leaf": 100
+        },
+        "cv_log_loss": 0.6942368045669262,
+        "validation_log_loss": 0.6901854276246927,
+        "validation_accuracy": 0.533651848774408
+      },
+      {
+        "candidate": 2,
+        "params": {
+          "n_estimators": 160,
+          "max_depth": 6,
+          "min_samples_leaf": 50
+        },
+        "cv_log_loss": 0.6957600854857309,
+        "validation_log_loss": 0.6895473813509454,
+        "validation_accuracy": 0.5371832156211052
+      },
+      {
+        "candidate": 3,
+        "params": {
+          "n_estimators": 160,
+          "max_depth": 8,
+          "min_samples_leaf": 100
+        },
+        "cv_log_loss": 0.6953060086430557,
+        "validation_log_loss": 0.6896775338682735,
+        "validation_accuracy": 0.5386373078520981
+      }
+    ]
+  },
+  "XGBoost": {
+    "selection": "minimum mean purged training time-CV log loss; validation loss tie-break",
+    "selected": {
+      "candidate": 1,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 2,
+        "learning_rate": 0.03,
+        "min_child_weight": 50,
+        "subsample": 0.75,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1.0,
+        "reg_lambda": 10.0
+      },
+      "cv_log_loss": 0.6946154174525482,
+      "validation_log_loss": 0.690724065786731,
+      "validation_accuracy": 0.5315745741587038
+    },
+    "candidates": [
+      {
+        "candidate": 1,
+        "params": {
+          "n_estimators": 100,
+          "max_depth": 2,
+          "learning_rate": 0.03,
+          "min_child_weight": 50,
+          "subsample": 0.75,
+          "colsample_bytree": 0.75,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0
+        },
+        "cv_log_loss": 0.6946154174525482,
+        "validation_log_loss": 0.690724065786731,
+        "validation_accuracy": 0.5315745741587038
+      },
+      {
+        "candidate": 2,
+        "params": {
+          "n_estimators": 160,
+          "max_depth": 2,
+          "learning_rate": 0.03,
+          "min_child_weight": 50,
+          "subsample": 0.75,
+          "colsample_bytree": 0.75,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0
+        },
+        "cv_log_loss": 0.6967739938468723,
+        "validation_log_loss": 0.6911947430824009,
+        "validation_accuracy": 0.5288741171582884
+      },
+      {
+        "candidate": 3,
+        "params": {
+          "n_estimators": 120,
+          "max_depth": 3,
+          "learning_rate": 0.03,
+          "min_child_weight": 50,
+          "subsample": 0.75,
+          "colsample_bytree": 0.75,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0
+        },
+        "cv_log_loss": 0.6965634439273881,
+        "validation_log_loss": 0.6914993415058364,
+        "validation_accuracy": 0.5328209389281263
+      }
+    ]
+  },
+  "LightGBM": {
+    "selection": "minimum mean purged training time-CV log loss; validation loss tie-break",
+    "selected": {
+      "candidate": 1,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 2,
+        "num_leaves": 3,
+        "learning_rate": 0.03,
+        "min_child_samples": 200,
+        "subsample": 0.75,
+        "colsample_bytree": 0.75,
+        "reg_alpha": 1.0,
+        "reg_lambda": 10.0
+      },
+      "cv_log_loss": 0.6936994208830566,
+      "validation_log_loss": 0.6907236051502452,
+      "validation_accuracy": 0.5324054840049854
+    },
+    "candidates": [
+      {
+        "candidate": 1,
+        "params": {
+          "n_estimators": 100,
+          "max_depth": 2,
+          "num_leaves": 3,
+          "learning_rate": 0.03,
+          "min_child_samples": 200,
+          "subsample": 0.75,
+          "colsample_bytree": 0.75,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0
+        },
+        "cv_log_loss": 0.6936994208830566,
+        "validation_log_loss": 0.6907236051502452,
+        "validation_accuracy": 0.5324054840049854
+      },
+      {
+        "candidate": 2,
+        "params": {
+          "n_estimators": 160,
+          "max_depth": 2,
+          "num_leaves": 3,
+          "learning_rate": 0.03,
+          "min_child_samples": 200,
+          "subsample": 0.75,
+          "colsample_bytree": 0.75,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0
+        },
+        "cv_log_loss": 0.6957268330990839,
+        "validation_log_loss": 0.691154751952223,
+        "validation_accuracy": 0.5338595762359784
+      },
+      {
+        "candidate": 3,
+        "params": {
+          "n_estimators": 120,
+          "max_depth": 3,
+          "num_leaves": 7,
+          "learning_rate": 0.03,
+          "min_child_samples": 200,
+          "subsample": 0.75,
+          "colsample_bytree": 0.75,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0
+        },
+        "cv_log_loss": 0.6966503937426456,
+        "validation_log_loss": 0.6915904117679329,
+        "validation_accuracy": 0.5340673036975488
+      }
+    ]
+  }
+}

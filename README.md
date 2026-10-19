@@ -1,5 +1,9 @@
 # Machine Learning Multifactor Stock Selection
 
+## Updated Course Project
+
+For the corrected MH6805 Group 12 experiment, start with **[course_project_mh6805/README.md](course_project_mh6805/README.md)** or **[the detailed Chinese guide](course_project_mh6805/README.zh-CN.md)**. It includes Logistic Regression, Random Forest, XGBoost and LightGBM, corrected inference eligibility, purged temporal selection, new real-data results, reports/slides and bilingual classmate documentation. The material below remains the legacy internship archive; do not mix its performance figures with the course results. Licensed data remain private.
+
 [中文说明](README.zh-CN.md) | [Research design](docs/RESEARCH_DESIGN.md) | [Data guide](docs/DATA.md) | [Limitations](docs/KNOWN_LIMITATIONS.md)
 
 A Python research project comparing **Random Forest, XGBoost and LightGBM** for historical CSI 500 stock selection, with Tushare data acquisition, 24 factors, chronological validation, decile analysis and transaction-cost-aware portfolio comparisons.

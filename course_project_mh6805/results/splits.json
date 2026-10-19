@@ -1,0 +1,32 @@
+{
+  "train": {
+    "signal_start": "2010-05-05",
+    "signal_end": "2017-09-26",
+    "dates": 91,
+    "inference_rows": 31964,
+    "labeled_rows": 18482
+  },
+  "validation": {
+    "signal_start": "2017-10-31",
+    "signal_end": "2019-03-25",
+    "dates": 18,
+    "inference_rows": 8618,
+    "labeled_rows": 5110
+  },
+  "test": {
+    "signal_start": "2019-04-23",
+    "signal_end": "2020-09-11",
+    "dates": 18,
+    "inference_rows": 8985,
+    "labeled_rows": 5394
+  },
+  "backtest": {
+    "signal_start": "2020-10-19",
+    "signal_end": "2025-04-01",
+    "dates": 55,
+    "inference_rows": 27467,
+    "labeled_rows": 16178
+  },
+  "final_training_rows_after_purge": 23014,
+  "training_only_rows_after_purge": 18200
+}

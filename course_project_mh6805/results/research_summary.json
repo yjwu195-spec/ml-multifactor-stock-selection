@@ -1,0 +1,565 @@
+{
+  "data_rows": 77034,
+  "features": 25,
+  "factor_families": {
+    "valuation": [
+      "earnings_price",
+      "book_price",
+      "sales_price",
+      "ocf_price"
+    ],
+    "growth": [
+      "revenue_yoy",
+      "netprofit_yoy",
+      "ocf_yoy"
+    ],
+    "quality": [
+      "roe",
+      "roa",
+      "grossprofit_margin",
+      "netprofit_margin",
+      "assets_turn"
+    ],
+    "leverage_liquidity": [
+      "debt_to_assets",
+      "noncurrent_liabilities_assets",
+      "current_ratio",
+      "cash_ratio"
+    ],
+    "momentum": [
+      "momentum20",
+      "momentum60"
+    ],
+    "trading_risk": [
+      "turnover20",
+      "turnover60",
+      "beta60",
+      "macd",
+      "mfi14",
+      "volatility20"
+    ],
+    "size": [
+      "log_market_value"
+    ]
+  },
+  "splits": {
+    "train": {
+      "signal_start": "2010-05-05",
+      "signal_end": "2017-09-26",
+      "dates": 91,
+      "inference_rows": 31964,
+      "labeled_rows": 18482
+    },
+    "validation": {
+      "signal_start": "2017-10-31",
+      "signal_end": "2019-03-25",
+      "dates": 18,
+      "inference_rows": 8618,
+      "labeled_rows": 5110
+    },
+    "test": {
+      "signal_start": "2019-04-23",
+      "signal_end": "2020-09-11",
+      "dates": 18,
+      "inference_rows": 8985,
+      "labeled_rows": 5394
+    },
+    "backtest": {
+      "signal_start": "2020-10-19",
+      "signal_end": "2025-04-01",
+      "dates": 55,
+      "inference_rows": 27467,
+      "labeled_rows": 16178
+    },
+    "final_training_rows_after_purge": 23014,
+    "training_only_rows_after_purge": 18200
+  },
+  "prediction_metrics": [
+    {
+      "model": "Logistic Regression",
+      "split": "test",
+      "accuracy": 0.5202076381164257,
+      "balanced_accuracy": 0.5202076381164257,
+      "f1": 0.5582109935131444,
+      "auc": 0.5322529090329428,
+      "log_loss": 0.6909848059485105,
+      "rank_ic_mean": 0.044344796574394,
+      "rank_ic_std": 0.1720568071220886,
+      "rank_ic_ir": 0.257733462082251,
+      "forward_return_coverage": 0.9983308830959552
+    },
+    {
+      "model": "Logistic Regression",
+      "split": "backtest",
+      "accuracy": 0.5318333539374459,
+      "balanced_accuracy": 0.5318333539374459,
+      "f1": 0.5835257890685143,
+      "auc": 0.5497776689148405,
+      "log_loss": 0.6885928759615189,
+      "rank_ic_mean": 0.0710318318540099,
+      "rank_ic_std": 0.1641760285551046,
+      "rank_ic_ir": 0.4326565362748347,
+      "forward_return_coverage": 0.9987759198301408
+    },
+    {
+      "model": "Random Forest",
+      "split": "test",
+      "accuracy": 0.5456062291434928,
+      "balanced_accuracy": 0.5456062291434928,
+      "f1": 0.5670376258611552,
+      "auc": 0.5554652314901312,
+      "log_loss": 0.6877592847426686,
+      "rank_ic_mean": 0.0813712035606735,
+      "rank_ic_std": 0.2113795098024489,
+      "rank_ic_ir": 0.3849531283175055,
+      "forward_return_coverage": 0.9983308830959552
+    },
+    {
+      "model": "Random Forest",
+      "split": "backtest",
+      "accuracy": 0.5417851403140067,
+      "balanced_accuracy": 0.5417851403140067,
+      "f1": 0.5997948496463855,
+      "auc": 0.5631856047753818,
+      "log_loss": 0.6875698562202345,
+      "rank_ic_mean": 0.0901881439633187,
+      "rank_ic_std": 0.2033892927985961,
+      "rank_ic_ir": 0.4434262134567058,
+      "forward_return_coverage": 0.9987759198301408
+    },
+    {
+      "model": "XGBoost",
+      "split": "test",
+      "accuracy": 0.5422691879866518,
+      "balanced_accuracy": 0.5422691879866518,
+      "f1": 0.569485614646905,
+      "auc": 0.5529972673189522,
+      "log_loss": 0.6880074399816306,
+      "rank_ic_mean": 0.077797852275656,
+      "rank_ic_std": 0.2064501285065936,
+      "rank_ic_ir": 0.3768360564288593,
+      "forward_return_coverage": 0.9983308830959552
+    },
+    {
+      "model": "XGBoost",
+      "split": "backtest",
+      "accuracy": 0.5413524539498084,
+      "balanced_accuracy": 0.5413524539498084,
+      "f1": 0.6044354408785585,
+      "auc": 0.5610050177191038,
+      "log_loss": 0.6875313464052576,
+      "rank_ic_mean": 0.0864357967489667,
+      "rank_ic_std": 0.2030593462537884,
+      "rank_ic_ir": 0.4256676599408394,
+      "forward_return_coverage": 0.9987759198301408
+    },
+    {
+      "model": "LightGBM",
+      "split": "test",
+      "accuracy": 0.5400444938820912,
+      "balanced_accuracy": 0.5400444938820912,
+      "f1": 0.575969919671851,
+      "auc": 0.5504671623904339,
+      "log_loss": 0.6881431132749112,
+      "rank_ic_mean": 0.0727537752698266,
+      "rank_ic_std": 0.2085868455565009,
+      "rank_ic_ir": 0.3487936886706476,
+      "forward_return_coverage": 0.9983308830959552
+    },
+    {
+      "model": "LightGBM",
+      "split": "backtest",
+      "accuracy": 0.5395598961552726,
+      "balanced_accuracy": 0.5395598961552726,
+      "f1": 0.613219793343372,
+      "auc": 0.5605036569230483,
+      "log_loss": 0.6880356339127844,
+      "rank_ic_mean": 0.0866749855808313,
+      "rank_ic_std": 0.2104074118919469,
+      "rank_ic_ir": 0.4119388418947077,
+      "forward_return_coverage": 0.9987759198301408
+    }
+  ],
+  "portfolios": [
+    {
+      "model": "LightGBM",
+      "strategy": "Long Top 10",
+      "total_return": 0.8021338099028283,
+      "annual_return": 0.1471717137413999,
+      "volatility": 0.1902192714588889,
+      "sharpe": 0.8160758619568298,
+      "max_drawdown": 0.1979660713141847,
+      "days": 1081,
+      "mean_rebalance_turnover": 0.8811069961211798,
+      "blocked_orders": 1.0
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "50 Long Top 10 / 50 Short CSI 500",
+      "total_return": 0.3479162389077057,
+      "annual_return": 0.0720787560549134,
+      "volatility": 0.0827306717839886,
+      "sharpe": 0.8827161259389398,
+      "max_drawdown": 0.0936152823196108,
+      "days": 1081,
+      "mean_rebalance_turnover": null,
+      "blocked_orders": null
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "50 Long Top 10 / 50 Short Bottom 10",
+      "total_return": 0.4540409734677946,
+      "annual_return": 0.0911876909988533,
+      "volatility": 0.1923243635882708,
+      "sharpe": 0.5498425074984561,
+      "max_drawdown": 0.2318425452242649,
+      "days": 1081,
+      "mean_rebalance_turnover": null,
+      "blocked_orders": null
+    },
+    {
+      "model": "Logistic Regression",
+      "strategy": "Long Top 10",
+      "total_return": -0.0149879116446878,
+      "annual_return": -0.0035142029983301,
+      "volatility": 0.2533924782730002,
+      "sharpe": 0.1095667407192071,
+      "max_drawdown": 0.3723670094132932,
+      "days": 1081,
+      "mean_rebalance_turnover": 0.8720261843354072,
+      "blocked_orders": 0.0
+    },
+    {
+      "model": "Logistic Regression",
+      "strategy": "50 Long Top 10 / 50 Short CSI 500",
+      "total_return": 0.0292590190850594,
+      "annual_return": 0.0067455582581612,
+      "volatility": 0.0717690710617969,
+      "sharpe": 0.1294807635276195,
+      "max_drawdown": 0.1539265674689672,
+      "days": 1081,
+      "mean_rebalance_turnover": null,
+      "blocked_orders": null
+    },
+    {
+      "model": "Logistic Regression",
+      "strategy": "50 Long Top 10 / 50 Short Bottom 10",
+      "total_return": 0.106659990309051,
+      "annual_return": 0.0239069282156625,
+      "volatility": 0.1662702723481911,
+      "sharpe": 0.2251405811277215,
+      "max_drawdown": 0.2226865679385373,
+      "days": 1081,
+      "mean_rebalance_turnover": null,
+      "blocked_orders": null
+    },
+    {
+      "model": "Random Forest",
+      "strategy": "Long Top 10",
+      "total_return": 0.600365774286264,
+      "annual_return": 0.1158532401610947,
+      "volatility": 0.1852198384830744,
+      "sharpe": 0.6832622584104454,
+      "max_drawdown": 0.1733804504493834,
+      "days": 1081,
+      "mean_rebalance_turnover": 1.0549691944121065,
+      "blocked_orders": 0.0
+    },
+    {
+      "model": "Random Forest",
+      "strategy": "50 Long Top 10 / 50 Short CSI 500",
+      "total_return": 0.2662011096451067,
+      "annual_return": 0.0565624432670663,
+      "volatility": 0.0856311984770438,
+      "sharpe": 0.6853563158186644,
+      "max_drawdown": 0.1295051037824836,
+      "days": 1081,
+      "mean_rebalance_turnover": null,
+      "blocked_orders": null
+    },
+    {
+      "model": "Random Forest",
+      "strategy": "50 Long Top 10 / 50 Short Bottom 10",
+      "total_return": 0.2998479493174548,
+      "annual_return": 0.0630418089504669,
+      "volatility": 0.2041559321914847,
+      "sharpe": 0.4013569698277517,
+      "max_drawdown": 0.2602119174502274,
+      "days": 1081,
+      "mean_rebalance_turnover": null,
+      "blocked_orders": null
+    },
+    {
+      "model": "XGBoost",
+      "strategy": "Long Top 10",
+      "total_return": 0.5846717502256911,
+      "annual_return": 0.1132926714864195,
+      "volatility": 0.184037209282199,
+      "sharpe": 0.6744764415229735,
+      "max_drawdown": 0.1920013309125071,
+      "days": 1081,
+      "mean_rebalance_turnover": 0.8791893916840342,
+      "blocked_orders": 1.0
+    },
+    {
+      "model": "XGBoost",
+      "strategy": "50 Long Top 10 / 50 Short CSI 500",
+      "total_return": 0.2594749027899183,
+      "annual_return": 0.0552513788651158,
+      "volatility": 0.085934821757615,
+      "sharpe": 0.6688255118458651,
+      "max_drawdown": 0.10232332684478,
+      "days": 1081,
+      "mean_rebalance_turnover": null,
+      "blocked_orders": null
+    },
+    {
+      "model": "XGBoost",
+      "strategy": "50 Long Top 10 / 50 Short Bottom 10",
+      "total_return": 0.2906995072457889,
+      "annual_return": 0.0612929487319076,
+      "volatility": 0.1968772602473195,
+      "sharpe": 0.4004555823691927,
+      "max_drawdown": 0.2400512513244339,
+      "days": 1081,
+      "mean_rebalance_turnover": null,
+      "blocked_orders": null
+    }
+  ],
+  "selected_parameters": {
+    "Logistic Regression": {
+      "selection": "minimum mean purged training time-CV log loss; validation loss tie-break",
+      "selected": {
+        "candidate": 1,
+        "params": {
+          "C": 0.01
+        },
+        "cv_log_loss": 0.7002443067630729,
+        "validation_log_loss": 0.6915435501546613,
+        "validation_accuracy": 0.5346904860822601
+      },
+      "candidates": [
+        {
+          "candidate": 1,
+          "params": {
+            "C": 0.01
+          },
+          "cv_log_loss": 0.7002443067630729,
+          "validation_log_loss": 0.6915435501546613,
+          "validation_accuracy": 0.5346904860822601
+        },
+        {
+          "candidate": 2,
+          "params": {
+            "C": 0.1
+          },
+          "cv_log_loss": 0.7017220107528447,
+          "validation_log_loss": 0.6916226228048267,
+          "validation_accuracy": 0.5342750311591192
+        },
+        {
+          "candidate": 3,
+          "params": {
+            "C": 1
+          },
+          "cv_log_loss": 0.70195451385203,
+          "validation_log_loss": 0.6916298801446015,
+          "validation_accuracy": 0.533651848774408
+        }
+      ]
+    },
+    "Random Forest": {
+      "selection": "minimum mean purged training time-CV log loss; validation loss tie-break",
+      "selected": {
+        "candidate": 1,
+        "params": {
+          "n_estimators": 160,
+          "max_depth": 4,
+          "min_samples_leaf": 100
+        },
+        "cv_log_loss": 0.6942368045669262,
+        "validation_log_loss": 0.6901854276246927,
+        "validation_accuracy": 0.533651848774408
+      },
+      "candidates": [
+        {
+          "candidate": 1,
+          "params": {
+            "n_estimators": 160,
+            "max_depth": 4,
+            "min_samples_leaf": 100
+          },
+          "cv_log_loss": 0.6942368045669262,
+          "validation_log_loss": 0.6901854276246927,
+          "validation_accuracy": 0.533651848774408
+        },
+        {
+          "candidate": 2,
+          "params": {
+            "n_estimators": 160,
+            "max_depth": 6,
+            "min_samples_leaf": 50
+          },
+          "cv_log_loss": 0.6957600854857309,
+          "validation_log_loss": 0.6895473813509454,
+          "validation_accuracy": 0.5371832156211052
+        },
+        {
+          "candidate": 3,
+          "params": {
+            "n_estimators": 160,
+            "max_depth": 8,
+            "min_samples_leaf": 100
+          },
+          "cv_log_loss": 0.6953060086430557,
+          "validation_log_loss": 0.6896775338682735,
+          "validation_accuracy": 0.5386373078520981
+        }
+      ]
+    },
+    "XGBoost": {
+      "selection": "minimum mean purged training time-CV log loss; validation loss tie-break",
+      "selected": {
+        "candidate": 1,
+        "params": {
+          "n_estimators": 100,
+          "max_depth": 2,
+          "learning_rate": 0.03,
+          "min_child_weight": 50,
+          "subsample": 0.75,
+          "colsample_bytree": 0.75,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0
+        },
+        "cv_log_loss": 0.6946154174525482,
+        "validation_log_loss": 0.690724065786731,
+        "validation_accuracy": 0.5315745741587038
+      },
+      "candidates": [
+        {
+          "candidate": 1,
+          "params": {
+            "n_estimators": 100,
+            "max_depth": 2,
+            "learning_rate": 0.03,
+            "min_child_weight": 50,
+            "subsample": 0.75,
+            "colsample_bytree": 0.75,
+            "reg_alpha": 1.0,
+            "reg_lambda": 10.0
+          },
+          "cv_log_loss": 0.6946154174525482,
+          "validation_log_loss": 0.690724065786731,
+          "validation_accuracy": 0.5315745741587038
+        },
+        {
+          "candidate": 2,
+          "params": {
+            "n_estimators": 160,
+            "max_depth": 2,
+            "learning_rate": 0.03,
+            "min_child_weight": 50,
+            "subsample": 0.75,
+            "colsample_bytree": 0.75,
+            "reg_alpha": 1.0,
+            "reg_lambda": 10.0
+          },
+          "cv_log_loss": 0.6967739938468723,
+          "validation_log_loss": 0.6911947430824009,
+          "validation_accuracy": 0.5288741171582884
+        },
+        {
+          "candidate": 3,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "learning_rate": 0.03,
+            "min_child_weight": 50,
+            "subsample": 0.75,
+            "colsample_bytree": 0.75,
+            "reg_alpha": 1.0,
+            "reg_lambda": 10.0
+          },
+          "cv_log_loss": 0.6965634439273881,
+          "validation_log_loss": 0.6914993415058364,
+          "validation_accuracy": 0.5328209389281263
+        }
+      ]
+    },
+    "LightGBM": {
+      "selection": "minimum mean purged training time-CV log loss; validation loss tie-break",
+      "selected": {
+        "candidate": 1,
+        "params": {
+          "n_estimators": 100,
+          "max_depth": 2,
+          "num_leaves": 3,
+          "learning_rate": 0.03,
+          "min_child_samples": 200,
+          "subsample": 0.75,
+          "colsample_bytree": 0.75,
+          "reg_alpha": 1.0,
+          "reg_lambda": 10.0
+        },
+        "cv_log_loss": 0.6936994208830566,
+        "validation_log_loss": 0.6907236051502452,
+        "validation_accuracy": 0.5324054840049854
+      },
+      "candidates": [
+        {
+          "candidate": 1,
+          "params": {
+            "n_estimators": 100,
+            "max_depth": 2,
+            "num_leaves": 3,
+            "learning_rate": 0.03,
+            "min_child_samples": 200,
+            "subsample": 0.75,
+            "colsample_bytree": 0.75,
+            "reg_alpha": 1.0,
+            "reg_lambda": 10.0
+          },
+          "cv_log_loss": 0.6936994208830566,
+          "validation_log_loss": 0.6907236051502452,
+          "validation_accuracy": 0.5324054840049854
+        },
+        {
+          "candidate": 2,
+          "params": {
+            "n_estimators": 160,
+            "max_depth": 2,
+            "num_leaves": 3,
+            "learning_rate": 0.03,
+            "min_child_samples": 200,
+            "subsample": 0.75,
+            "colsample_bytree": 0.75,
+            "reg_alpha": 1.0,
+            "reg_lambda": 10.0
+          },
+          "cv_log_loss": 0.6957268330990839,
+          "validation_log_loss": 0.691154751952223,
+          "validation_accuracy": 0.5338595762359784
+        },
+        {
+          "candidate": 3,
+          "params": {
+            "n_estimators": 120,
+            "max_depth": 3,
+            "num_leaves": 7,
+            "learning_rate": 0.03,
+            "min_child_samples": 200,
+            "subsample": 0.75,
+            "colsample_bytree": 0.75,
+            "reg_alpha": 1.0,
+            "reg_lambda": 10.0
+          },
+          "cv_log_loss": 0.6966503937426456,
+          "validation_log_loss": 0.6915904117679329,
+          "validation_accuracy": 0.5340673036975488
+        }
+      ]
+    }
+  },
+  "contribution": "Wu Yangjie, Zhao Jingjie and Wang Zhaobo contributed equally.",
+  "caveat": "Financial announcement dates are respected, but historical revision vintages are not independently certified; execution/shorting assumptions remain simplified."
+}
